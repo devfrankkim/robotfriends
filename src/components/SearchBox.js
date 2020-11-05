@@ -3,15 +3,15 @@ import React from 'react'
 //rfce
 const SearchBox = ({searchChange}) => {
     console.log(searchChange);
-    return (
-        <>
+    return (  
+        <div className='pa2'>
             <input 
-                className="ps3 ba b--green bg-lightest-blue" 
+                className='pa3 ba b--green bg-lightest-blue'                
                 type="search" 
                 placeholder="search robots" 
                 onChange = {searchChange}
             />
-        </>
+        </div>
     )
 }
 

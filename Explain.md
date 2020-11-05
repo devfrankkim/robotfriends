@@ -41,8 +41,30 @@ we are replacing <div id="root"></div> with the entire <App/>.
 */
 
 ReactDOM.render(<App /> ,document.getElementById('root'));
+```
 
 
+### props.children
 
+- Using the "props.children", we can create Components that wrap other Components.       
+- "props.children" automatically gets added.
 
+```js
+   <Scroll>
+        <CardList robots={filteredRobots}/>
+   </Scroll>
+```
+
+```js
+import React from 'react'
+
+const Scroll = (props) => {    
+    return (
+        <div style={{overflowY: 'scroll', border: '5px solid black', height: '900px'}}>
+            <h1>{props.children}</h1>
+        </div>
+    )
+}
+
+export default Scroll
 ```
